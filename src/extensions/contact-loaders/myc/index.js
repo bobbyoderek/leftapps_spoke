@@ -259,7 +259,7 @@ export async function processContactLoad(job, maxContacts, organization) {
   const webhookUrl = `${getConfig(
     "NGP_VAN_WEBHOOK_BASE_URL",
     organization
-  )}/ingest-data/myc/${job.id}/${maxContacts || 0}/${
+  )}/ingest-data/ngpvan/${job.id}/${maxContacts || 0}/${
     ingestDataReference.savedListId
   }`;
 
