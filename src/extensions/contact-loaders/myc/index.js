@@ -80,7 +80,7 @@ export function addServerEndpoints(expressApp) {
   // Currently, this is implemented by VAN as a placeholder, it carries no meaningful data and
   // is included here for illustrative purposes.
   expressApp.post(
-    "/integration/ngpvan/ingest/:jobId/:maxContacts/:vanListId",
+    "/integration/myc/ingest/:jobId/:maxContacts/:vanListId",
     function(req, res) {
       const { jobId, maxContacts, vanListId } = req.params;
       console.log(
@@ -259,7 +259,7 @@ export async function processContactLoad(job, maxContacts, organization) {
   const webhookUrl = `${getConfig(
     "NGP_VAN_WEBHOOK_BASE_URL",
     organization
-  )}/ingest-data/ngpvan/${job.id}/${maxContacts || 0}/${
+  )}/ingest-data/myc/${job.id}/${maxContacts || 0}/${
     ingestDataReference.savedListId
   }`;
 
