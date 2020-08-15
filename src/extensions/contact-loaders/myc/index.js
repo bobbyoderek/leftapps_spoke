@@ -13,7 +13,7 @@ export const DEFAULT_NGP_VAN_EXPORT_JOB_TYPE_ID = 8;
 export const DEFAULT_PHONE_NUMBER_COUNTRY = "US";
 
 export function displayName() {
-  return "NGPVAN--My Campaigns (beta)";
+  return "NGPVAN--MyCampaign (beta)";
 }
 
 export function serverAdministratorInstructions() {
