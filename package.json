@@ -50,7 +50,7 @@
     "dev-nowrap": "nf start --trim 500 --procfile ./dev-tools/Procfile.dev --env ./__test__/e2e/.env.e2e",
     "debug-server": "nf start -w --procfile ./dev-tools/Procfile-debug-server.dev",
     "buy-numbers": "./dev-tools/babel-run-with-env.js ./dev-tools/buy-numbers.js",
-    "errored-message-sender": "./dev-tools/babel-run ./src/workers/process-errored-messages.js"
+    "errored-message-sender": "./dev-tools/babel-run ./src/workers/errored-message-sender.js"
   },
   "repository": {
     "type": "git",
