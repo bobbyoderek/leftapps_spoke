@@ -4,4 +4,3 @@ erroredMessageSender().catch(err => {
   console.log(err);
 });
 console.log("Finishing up an errored message resend run");
-process.exit();
