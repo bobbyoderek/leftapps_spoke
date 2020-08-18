@@ -7,9 +7,9 @@ function doErroredMessageSender() {
     .catch(err => {
       console.log(err);
     })
-    .then(() => console.log("Interior send compelte messeage"));
+    .then(() => console.log("Interior send complete messeage"));
 
   console.log("Finishing up an errored message resend run");
 }
 
-setInterval(doErroredMessageSender, 30000);
+setInterval(doErroredMessageSender, 300000);
