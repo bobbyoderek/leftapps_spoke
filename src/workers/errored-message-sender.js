@@ -15,3 +15,4 @@ sleep(100000).then(() => {
   console.log("Sleep has elapsed, shutting down");
 });
 console.log("Post-sleep");
+process.exit();
