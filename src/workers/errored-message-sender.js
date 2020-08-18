@@ -11,7 +11,7 @@ function sleep(millis) {
   return new Promise(resolve => setTimeout(resolve, millis));
 }
 console.log("Pre-sleep");
-sleep(10000).then(() => {
+sleep(100000).then(() => {
   console.log("Sleep has elapsed, shutting down");
 });
 console.log("Post-sleep");
