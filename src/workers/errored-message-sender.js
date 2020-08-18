@@ -1,13 +1,10 @@
-function sleep(ms) {
-  return new Promise(resolve => {
-    setTimeout(resolve, ms);
-  });
-}
 import { erroredMessageSender } from "./job-processes";
 console.log("Kicking off an errored message resend run");
 erroredMessageSender().catch(err => {
   console.log(err);
 });
 console.log("Finishing up an errored message resend run");
-await sleep(10000);
+
+await new Promise(resolve => setTimeout(resolve, 10000));
+
 process.exit();
