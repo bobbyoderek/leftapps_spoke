@@ -1,10 +1,15 @@
 import { erroredMessageSender } from "./job-processes";
 console.log("Kicking off an errored message resend run");
-await erroredMessageSender()
-  .catch(err => {
-    console.log(err);
-  })
-  .then(() => console.log("finished with the sender"));
-console.log("Finishing up an errored message resend run");
+setInterval(
+  console
+    .log("Set interval starting")
+    .then(
+      erroredMessageSender().catch(err => {
+        console.log(err);
+      })
+    )
+    .then(() => console.log("Set interval ending")),
+  30000
+);
 
-process.exit();
+console.log("Finishing up an errored message resend run");
