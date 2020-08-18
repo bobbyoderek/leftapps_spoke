@@ -12,4 +12,4 @@ function doErroredMessageSender() {
   console.log("Finishing up an errored message resend run");
 }
 
-setInterval(doErroredMessageSender(), 30000);
+setInterval(doErroredMessageSender, 30000);
