@@ -6,3 +6,12 @@ erroredMessageSender()
   })
   .then(() => console.log("finished with the sender"));
 console.log("Finishing up an errored message resend run");
+
+function sleep(millis) {
+  return new Promise(resolve => setTimeout(resolve, millis));
+}
+sleep(10000).then(() => {
+  console.log("Sleep has elapsed, shutting down");
+});
+
+process.exit();
