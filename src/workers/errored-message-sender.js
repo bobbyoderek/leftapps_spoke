@@ -14,8 +14,8 @@ function doErroredMessageSender() {
 
 function killTime() {
   console.log("We reached the end of the break, shutting down!");
+  process.exit();
 }
 
 setTimeout(doErroredMessageSender, 1000);
 setTimeout(killTime, 240000);
-process.exit();
