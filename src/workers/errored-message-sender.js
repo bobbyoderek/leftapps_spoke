@@ -18,3 +18,4 @@ function killTime() {
 
 setTimeout(doErroredMessageSender, 1000);
 setTimeout(killTime, 240000);
+process.exit();
