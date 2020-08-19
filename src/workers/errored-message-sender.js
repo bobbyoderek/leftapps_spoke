@@ -12,4 +12,9 @@ function doErroredMessageSender() {
   console.log("Finishing up an errored message resend run");
 }
 
-setInterval(doErroredMessageSender, 300000);
+function killTime() {
+  console.log("We reached the end of the break, shutting down!");
+}
+
+setTimeout(doErroredMessageSender, 1000);
+setTimeout(killTime, 240000);
