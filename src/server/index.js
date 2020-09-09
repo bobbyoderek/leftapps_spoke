@@ -155,9 +155,7 @@ if (process.env.NEXMO_API_KEY) {
 
 app.post(
   "/twilio-message-report",
-  twilio.headerValidator(
-    process.env.TWILIO_STATUS_CALLBACK_URL || global.TWILIO_STATUS_CALLBACK_URL
-  ),
+
   wrap(async (req, res) => {
     try {
       const body = req.body;
