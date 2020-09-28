@@ -721,12 +721,6 @@ export async function exportCampaign(job) {
         "campaign_contact.id",
         "message.campaign_contact_id"
       )
-      .leftJoin("assignment", "assignment.id", "campaign_contact.assignment_id")
-      .select(
-        "message.*",
-        "campaign_contact.assignment_id",
-        "assignment.user_id"
-      )
       .where("campaign_contact.assignment_id", assignment.id);
     let convertedMessages = messages.map(message => {
       const messageRow = {
@@ -740,7 +734,7 @@ export async function exportCampaign(job) {
         text: message.text,
         errorCode: message.error_code,
         campaignContactId: message.campaign_contact_id,
-        texterUserId: assignment.user_id
+        texterUserId: message.user_id
       };
       return messageRow;
     });
