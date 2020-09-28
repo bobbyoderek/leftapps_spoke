@@ -733,7 +733,9 @@ export async function exportCampaign(job) {
         sendStatus: message.send_status,
         attemptedAt: moment(message.created_at).toISOString(),
         text: message.text,
-        errorCode: message.error_code
+        errorCode: message.error_code,
+        campaignContactId: message.campaign_contact_id,
+        texterUserId: assignment.user_id
       };
       return messageRow;
     });
